@@ -1,0 +1,95 @@
+server:
+  port: 9009
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  profiles:
+    active: test
+  application:
+    name: demo-pay
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+  thymeleaf:
+    prefix: classpath:/templates/ #设置thymeleaf页面的存储路径
+    suffix: .html #设置thymeleaf页面的后缀
+    mode: HTML5
+    encoding: UTF-8 #设置thymeleaf页面的编码
+    cache: false #关闭 thymeleaf 的缓存开发过程中无需重启
+    servlet:
+      content-type: text/html
+feign:
+  hystrix:
+    enabled: true
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#dubbo:
+# registry:
+#  check: false
+#  address: nacos://127.0.0.1:8848
+# application:
+#  name: pay-dubbo
+# scan:
+#  basePackages: com.demo.pay.service.impl.dubbo
+# protocol:
+#  name: dubbo
+#  port: -1
+# consumer:
+#  check: false
+alipay:
+  app-id: 2021002106636043
+  notify-url: https://www.baidu.com
+  return-url: https://www.baidu.com
+  sign-type: RSA2
+  charset: utf-8
+  format: json
+  gateway-url: https://openapi.alipaydev.com/gateway.do
+  private-key: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDEv7arth6ySYb67Zhyk5rS5bY/82XbdnHduyiyKCYLz0e8eT9P1XWEXKPUGSUcsdUooxvVtPJe2LkCnX0Rno7clonIArMrjXukD4vT1ip3PustpNSp16OoJC8h3pcv4yfzN6iPpChkQXMOUUv66o9nQhjJiSODA/xdDcurNmVcB0V23QCOInqM6nUG0xW3hzgJU+TUIDjAqNbnGp5poVbMLOCzsr0c9ukEMVtU7zitb9AjNQWwQq+gqimyRBH5cYxFRdxOb0YZbilDWMYOMgg+FJ38+2ySlpVvCo9JjPOrtiollzQ/nI1PW//L/gkUIGy/QZrspjlQsaWMr33SIh7vAgMBAAECggEANvTeD4SlemNzYq/vP0Hfoz0q9R4Fu5GQKMFYkrsINZBGl2y+tIwJcVl3IY2MgkFiKyG0arNKaBfdRc+72aoSeadLASVP6sBwYtk804UlA339rxg1luN3AUZqK+nDDUtEI3nOiaDu72Igw0UOFh5ixBMAXXsDAlugqFVsKHzfPx8CyfKt3wCgAhnGD/T4SjZYTWYfAjp0oAWuk5A3Pc05Ak7j3LxhFC5vcXEEuhyaFH5avg/VSRglS+nd8EH21ORCyXLfaFAa62Ipun3tQqtEB5eAxpv6jDysCsF2CD7X4QC7qfy3QCMsS39q33j318DBO4sVe0n5MBFK3+eGZKYCYQKBgQD43k6xB4HYI3o9CVm+1P5FnZ8nMJxJnDnNc5r0Thtp7qlOct0VPm5FyDVjhB2jI0vrDytPjfNe3sEfXTeYq3CGwc7yPB8LKt06EkQfQpKpTIzlY6to7Mcoe8RoMWIc0w17dAHf6um+2b1J2Jf4/PlpAb4V+9hW+3MyW58zhzbTdwKBgQDKYw8GwUyoTZy+N40VAF50c7opOwC4QrEehbkvdpyRm+2ZayX1DkiYDGcPEfCZWyVxndVANDCgxp7stho4JyrzluhfW1jiIzdyMHE0T2CDy2o8lTfx2z3tVfvFrr1zazUwboInQsraj4Xz+TfscqiUwVdQYbj8EFmCwO4xHj8+SQKBgENlUMI4Wj2CPhRRd/BqFgIcUYF3dJuqpyywZgJLNLlXXJpWGPEr2wki0vKEUNJhOKoLjZsZwhKrGHm58NhzdSHJUpXfGjkX/pk/YRtmF/mpNW7Zsw3TMYwRGHtvBDbyIPCR1gAhyfNZXB2nfmB7gb+iLSwe69OCfQviLBb0QzC5AoGAVS4SAfbTS7a2tLxurZslJgAbJwVFTUgMgdsoUNisFwC4pKybIiOr3ArESWx0hib9gG88dLRCjzhpZRlTubSKeFFYZeHta+gEixPmYWzTI0U25l6rWCi9TKm2uMHNzMkfbs3kC6Ap/okPiNqodeTgHROuqw8mKzi6Y7TNy3B+j7kCgYBCR3fekJOucFhkDjqZT9U6O/Uh++nxegg9z8IKjltgwQ2tqi2zUm0TRWe069hlzlvlbuW2znaJgjhX1MuoQTxUE12m8pd1GODljO2VzHfVrt1rVjFJGQGLPh5ZltZzAtsqs6OMDo4llRJ9Wj0dp+hUI77XfoKvFLKUpJhG63Z4HQ==
+  app-cert-path: C:\\Users\\handsure\\Desktop\\gitHub\\demo\\demo-pay\\src\\main\\resources\\static\\appCertPublicKey_2021002106636043.crt
+  alipay-cert-path: C:\\Users\\handsure\\Desktop\\gitHub\\demo\\demo-pay\\src\\main\\resources\\static\\alipayCertPublicKey_RSA2.crt
+  alipay-rootcert-path: C:\\Users\\handsure\\Desktop\\gitHub\\demo\\demo-pay\\src\\main\\resources\\static\\alipayRootCert.crt
+
+
+
+
+
+---
+spring:
+  profiles: test
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&failOverReadOnly=false&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+---
+spring:
+  profiles: dev
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&failOverReadOnly=false&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

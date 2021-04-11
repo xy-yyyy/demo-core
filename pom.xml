@@ -69,5 +69,6 @@
         <module>demo-common</module>
         <module>demo-dubbo-public-api</module>
         <module>demo-pay</module>
+        <module>demo-rabbitmq</module>
     </modules>
 </project>

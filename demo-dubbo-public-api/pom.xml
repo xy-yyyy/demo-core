@@ -10,6 +10,5 @@
     <modelVersion>4.0.0</modelVersion>
     <name>demo-dubbo-public-api api</name>
     <artifactId>demo-dubbo-public-api</artifactId>
-    <groupId>com.demo</groupId>
 
 </project>

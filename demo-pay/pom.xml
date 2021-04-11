@@ -10,7 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>demo-pay</artifactId>
     <name>demo-pay API</name>
-    <groupId>com.demo</groupId>
     <dependencies>
         <dependency>
             <groupId>io.springfox</groupId>
@@ -21,48 +20,6 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.7.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.demo</groupId>
-            <artifactId>demo-dubbo-public-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <!-- Dubbo Nacos registry dependency -->
-        <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo-registry-nacos -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo-registry-nacos</artifactId>
-            <version>2.6.7</version>
-        </dependency>
-        <!-- Dubbo dependency -->
-        <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>2.6.7</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.2.1.RELEASE</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.alibaba</groupId>
-                    <artifactId>dubbo</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.2.1.RELEASE</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.alibaba</groupId>
-                    <artifactId>dubbo</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <!-- nacos -->
